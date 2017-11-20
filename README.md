@@ -46,8 +46,44 @@ ROCKETCHAT_USER e ROCKETCHAT_PASSWORD no arquivo docker-compose.yml. Por padrão
 
 Para adicionar a role ao bot, clique na opção Select a Role, selecione bot e clique na opção ADD ROLE. Por fim, clique em Save.
 
-![Adm option](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/adding_bot.png)
+![Adding bot tutorial](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/adding_bot.png)
 
 Agora você já está apto a conversar com o bot diretamente, ou pelos canais usando @botnat antes da mensagem.
 
 ### Livechat
+
+O livechat permite que seja criada uma janela de conversa com o bot integrável à outras páginas. Para ativá-lo acesse novamente a opção 
+Administration, clicando na seta para baixo, ao lado do nome da sua conta, no meu lateral esquerdo. Em seguida, clique na opção Livechat.
+
+![Livechat option on adm menu](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/livechat_sidebar.png)
+
+Na tela seguinte, marque a opção Livechat enabled como True e clique em SAVE CHANGES.
+
+![Livechat activation screen](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/active_livechat.png)
+
+Fehe o menu lateral esquerdo de administração e clique novamente na seta para baixo, ao lado do nome da sua conta. Clique na opção Livechat.
+
+![Livechat option](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/livechat_option.png)
+
+No menu lateral esquerdo Livechat, selecione a opção User Management. Você deve adicionar o bot como um agente, logo procure por botnat, 
+e em seguida clique em ADD.
+
+![Adding bot as agent](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/add_agent.png)
+
+Agora é necessário criar um departamento. No menu lateral esquerdo, clique em Departments, e em seguida em NEW DEPARTMENT.
+
+![Adding bot as agent](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/new_department.png)
+
+Na tela seguinte, preencha um nome e uma descrição para o departamento e adicione o bot clicando no bot desejado em Available agents.
+Em seguida clique em Save.
+
+![Create new department](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/add_agent_to_department.png)
+
+No menu lateral esquerdo, clique em Installation. Agora é só copiar o código exibido e colar no site o qual você deseja integrar 
+a janela de conversa com o bot.
+
+![Installation code](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/installation.png)
+
+Após integrar o código ao seu site, uma janela semelhante a da imagem a seguir deve estar disponível.
+
+![Livechat window](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/livechat.png)
