@@ -154,10 +154,14 @@ module.exports = (_config, _configPath, robot) ->
 
   classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
 
-  trainBot = () ->
+  trainBot = (retrain = false) ->
     console.log 'Processing interactions'
     console.time 'Processing interactions (Done)'
-    #console.log(config.interactions)
+
+    if retrain
+        nodes = {}
+        classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
+
     for interaction in config.interactions
       {name, classifiers, event} = interaction
       nodes[name] = new events[event] interaction
@@ -166,7 +170,9 @@ module.exports = (_config, _configPath, robot) ->
         err_nodes++
       if interaction.level != 'context'
         classifyInteraction interaction, classifier
+
     classifier.train()
+
     console.timeEnd 'Processing interactions (Done)'
 
   trainBot()
@@ -238,7 +244,7 @@ module.exports = (_config, _configPath, robot) ->
   if debug_mode
     robot.respond /bottrain/i, (res) ->
       config = loadConfigfile(configPath)
-      trainBot()
+      trainBot(true)
 
   robot.hear /(.+)/i, (res) ->
     res.sendWithNaturalDelay = sendWithNaturalDelay.bind(res)
