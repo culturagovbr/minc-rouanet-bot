@@ -6,7 +6,7 @@ O projeto é desenvolvido com base no Rocket Chat e no Hubot-Natural.
 
 ## Ambiente
 
-Uma vez que você tenha instalada o docker-compose, é possível executar o Rouanet Bot através dos seguintes comandos,
+Uma vez que você tenha instalado o [docker-compose](https://docs.docker.com/compose/install/), é possível executar o Rouanet Bot através dos seguintes comandos,
 executados dentro da pasta do projeto:
 
 ```sh
@@ -23,8 +23,9 @@ docker-compose up hubot-natural
 ```
   
     
-O Rocket Chat é executado na porta 3000 e o Hubot-Natural na porta 3001, conforme definido no arquivo docker-compose.yml. 
-Acessando http://localhost:3000/ você terá acesso ao Rocket Chat.
+O Rocket Chat é executado na porta 3000 e o Hubot-Natural na porta 3001, conforme definido no arquivo docker-compose.yml. Caso alguma dessas portas 
+já estejam sendo utilizadas na sua máquina, altere a configuração neste arquivo.
+Com as configurações padrões, acessando http://localhost:3000/ você terá acesso ao Rocket Chat.
 
 ## Adicionando o bot
 
@@ -87,3 +88,7 @@ a janela de conversa com o bot.
 Após integrar o código ao seu site, uma janela semelhante a da imagem a seguir deve estar disponível.
 
 ![Livechat window](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/livechat.png)
+
+## Alterando o YAML
+
+Para mais informações sobre a estrutura do YAML e como modificá-lo, acesse o [README do Hubot-Natural](https://github.com/RocketChat/hubot-natural/blob/master/README.md).
