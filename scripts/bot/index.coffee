@@ -10,17 +10,7 @@ else
 
 debug_mode = ((process.env.HUBOT_NATURAL_DEBUG_MODE == 'true') || false)
 
-config = {}
-events = {}
-nodes = {}
-error_count = 0
-err_nodes = 0
-
 {regexEscape, loadConfigfile} = require path.join '..', 'lib', 'common.coffee'
-
-eventsPath = path.join __dirname, '..', 'events'
-for event in fs.readdirSync(eventsPath).sort()
-  events[event.replace /\.coffee$/, ''] = require path.join eventsPath, event
 
 typing = (res, t) ->
   res.robot.adapter.callMethod 'stream-notify-room', res.envelope.user.roomID+'/typing', res.robot.alias, t is true
@@ -64,31 +54,6 @@ setUserName = (res, name) ->
 	,
 		_id: res.envelope.room
 #
-
-classifyInteraction = (interaction, classifier) ->
-  if Array.isArray interaction.expect
-    for doc in interaction.expect
-      if interaction.multi == true
-        classifier.addDocument(doc, interaction.name+'|'+doc)
-      else
-        classifier.addDocument(doc, interaction.name)
-
-    if Array.isArray interaction.next?.interactions
-      interaction.next.classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
-      for nextInteractionName in interaction.next.interactions
-        nextInteraction = config.interactions.find (n) ->
-          return n.name is nextInteractionName
-        if not nextInteraction?
-          console.log 'No valid interaction for', nextInteractionName
-          continue
-        classifyInteraction nextInteraction, interaction.next.classifier
-      interaction.next.classifier.train()
-
-    if interaction.multi == true
-      interaction.classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
-      for doc in interaction.expect
-        interaction.classifier.addDocument(doc, doc)
-      interaction.classifier.train()
 
 setContext = (res, context) ->
   key = 'context_'+res.envelope.room+'_'+res.envelope.user.id
@@ -145,37 +110,13 @@ module.exports = (_config, _configPath, robot) ->
   config = _config
   configPath = _configPath
 
-  if not config.interactions?.length
-    robot.logger.warning 'No interactions configured.'
+  try
+    brain = new Brain(config)
+  catch error
+    console.log error
     return
-  if not config.trust
-    robot.logger.warning 'No trust level configured.'
-    return
 
-  classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
-
-  trainBot = (retrain = false) ->
-    console.log 'Processing interactions'
-    console.time 'Processing interactions (Done)'
-
-    if retrain
-        nodes = {}
-        classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
-
-    for interaction in config.interactions
-      {name, classifiers, event} = interaction
-      nodes[name] = new events[event] interaction
-      # count error nodes
-      if name.substr(0,5) == "error"
-        err_nodes++
-      if interaction.level != 'context'
-        classifyInteraction interaction, classifier
-
-    classifier.train()
-
-    console.timeEnd 'Processing interactions (Done)'
-
-  trainBot()
+  brain.train()
 
   processMessage = (res, msg) ->
     context = getContext(res)
@@ -200,7 +141,7 @@ module.exports = (_config, _configPath, robot) ->
 
     if debugMode
       newMsg = buildClassificationDebugMsg(res, classifications)
-      robot.adapter.chatdriver.customMessage(newMsg);
+      robot.adapter.chatdriver.customMessage(newMsg)
 
     if classifications[0].value >= trust
       clearErrors res
@@ -244,7 +185,7 @@ module.exports = (_config, _configPath, robot) ->
   if debug_mode
     robot.respond /bottrain/i, (res) ->
       config = loadConfigfile(configPath)
-      trainBot(true)
+      brain.train(true)
 
   robot.hear /(.+)/i, (res) ->
     res.sendWithNaturalDelay = sendWithNaturalDelay.bind(res)
@@ -257,32 +198,3 @@ module.exports = (_config, _configPath, robot) ->
         processMessage res, msg
     else if res.envelope.user.roomType in ['d','l']
       processMessage res, msg
-
-# TODO
-# make a function for checking roles
-# const usersAndRoles = {};
-#
-# module.exports = function (robot) {
-#     robot.adapter.chatdriver.callMethod('getUserRoles').then(function (users) {
-#         users.forEach(function (user) {
-#             user.roles.forEach(function (role) {
-#                 if (typeof (usersAndRoles[role]) === 'undefined') {
-#                     usersAndRoles[role] = [];
-#                 }
-#
-#                 usersAndRoles[role].push(user.username);
-#             });
-#         });
-#     });
-#
-#     robot.respond(/test/i, function (res) {
-#         console.log(res);
-#
-#         if (usersAndRoles.admin.indexOf(res.message.user.name) === -1) {
-#             res.reply('What...?');
-#         } else {
-#             res.reply('hello boss!');
-#         }
-#
-#     });
-# }
