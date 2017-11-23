@@ -112,22 +112,6 @@ interactions:
     event: respond
     type: random
 
-  - name: licenca
-    expect:
-      - qual e a sua licença
-      - voce e licenciado como AGPL
-      - sua licenca de software
-      - posso copiar voce
-      - posso ver seu codigo
-      - voce e opensource
-      - voce e um software livre
-    answer:
-      - Sou um software livre, licenciado com a MIT =)
-      - tenho uma licença MIT, mas gosto muito das outras licenças opensource...
-      - Eu sou e sempre serei um robô livre, opensource, MIT license. o/
-    event: respond
-    type: random
-
   - name: error-1
     answer:
       - desculpe, não entendi.. pode tentar usar mais detalhes
@@ -154,7 +138,13 @@ interactions:
 
   - name: ingressos
     expect:
-      - O valor máximo de comercialização dos ingressos ou produtos culturais é de R$ 150,00 (cento e cinquenta reais)?
+      - O valor máximo de comercialização dos ingressos? 
+      - O valor máximo de comercialização dos produtos culturais?
+      - O teto da comercialização?
+      - Quanto eu posso cobrar pela comercialização?
+      - Quanto pode ser cobrado pelo comercialização?
+      - O valor máximo é R$ 150,00 (cento e cinquenta reais)?
+      - QUal o preço médio do produto cultural? 
     answer:
       - A comercialização dos ingressos ou outros produtos culturais resultantes do projeto não possui teto de valor unitário, observando que esses valores estarão sempre sujeitos à aprovação do MinC com vistas a assegurar a democratização.
       - O preço médio do produto cultural a ser vendido a critério do proponente referente à cota de 50% da tiragem total de produtos é que deve ser no máximo de três vezes o valor mensal do Vale-Cultura, o que hoje representa R$ 150,00.
@@ -164,7 +154,10 @@ interactions:
 
   - name: valor-projetos
     expect:
-      - Qual é o valor máximo por projeto?
+      - O valor máximo por projeto?
+      - O custo máximo do projeto?
+      - O valor máximo para projetos de pessoa física ou empresário individual (MEI)?
+      - O valor máximo para projetos de empresa individual (EIRELI)?
     answer:
       - Para a Pessoa Física e para o Empresário Individual – EI com enquadramento em Microempresário Individual – MEI o valor máximo é de R$ 700.000,00 (setecentos mil reais).
       - Para os demais enquadramentos de Empresário Individual – EI o valor máximo é de R$ 5.000.000,00 (cinco milhões de reais).
@@ -175,7 +168,15 @@ interactions:
   - name: cache-artisticos
     expect:
       - Qual é o teto máximo para os cachês artísticos?
-      - E no caso de orquestras, como é calculado os cachês dos músicos e do maestro?
+      - Qual é o teto máximo no caso de orquestras?
+      - Como é calculado os cachês dos músicos e do maestro?
+      - Quanto é o cachê?
+      - Quanto pode ser pago para os artistas?
+      - Quanto posso pagar para os artistas?
+      - Qual preço máximo dos artistas?
+      - O valor máximo para artista solo?
+      - O valor máximo para grupos?
+      - O valor máximo para modelos?
     answer:
       - O tetos máximos de cachês artísticos por apresentação estão previstos no art. 29 da IN 01/17.
       - São eles: R$ 30.000,00 (trinta mil reais) para artista solo ou modelo solo e R$ 60.000,00 (sessenta mil reais) para grupos artísticos ou grupos de modelos de passarela.
@@ -186,8 +187,14 @@ interactions:
   - name: conta-vinculada
     expect:
       - Como vai se dar a operação da Conta Vinculada?
+      - O que é Conta Vinculada?
+      - Como obtenho uma Conta Vinculada?
+      - A Conta Vinculada é em que banco ou agência?
+      - Quando posso usar a Conta Vinculada?
+      - Como posso usar a Conta Vinculada?
+      - Qual o mínimo para usar a Conta Vinculada?
     answer:
-      - Após a publicação no Diário Oficial da União – DOU da Portaria que que autoriza a captação de recursos incentivados será aberta uma conta na agência do Banco do Brasil da escolha do proponente.
+      - Após a publicação no Diário Oficial da União – DOU da Portaria que autoriza a captação de recursos incentivados será aberta uma conta na agência do Banco do Brasil da escolha do proponente.
       - Será uma Conta Vinculada ao projeto. Caso o projeto seja homologado e atingido o percentual mínimo de 20% de captação os recursos poderão ser movimentados por intermédio de cartão magnético ou gerenciador financeiro.
       - O MinC disponibilizará para o cartão os recursos das captações subsequentes (o que também faculta movimentar via gerenciador financeiro) na medida da execução do projeto. Referência direta: Seção I do Capítulo VII da IN 01/17, arts. 80 a 83.
     event: respond
@@ -196,15 +203,25 @@ interactions:
   - name: periodo-transferencia
     expect:
       - Quando é possível a transferência de recursos de um projeto para outro?
+      - Posso transferir recursos para outro projeto?
+      - Quantas vezes posso transferir recursos de um projeto para outro?
+      - Posso transferir recursos para um projeto de outro proponente?
     answer:
-      - Após a homologação e antes do projeto entrar em execução, desde que acolhidas as justificativas do proponente e apresentadas as anuências dos patrocinadores.
+      - A transferência é possível após a homologação e antes do projeto entrar em execução, desde que acolhidas as justificativas do proponente e apresentadas as anuências dos patrocinadores.
       - A operação poderá ser realizada apenas uma vez, somente para outro projeto do mesmo proponente, implicando no arquivamento do projeto doador. Tópico abordado nos §s 3º e 4º do art. 80 da IN 01/17.
     event: respond
     type: block
 
   - name: teto-proponente
     expect:
-      - O teto de R$ 200.000,00 (duzentos mil reais) para apresentação do 1º projeto é para qualquer proponente ou somente para aquele que não possui experiência comprovada na área cultural?
+      - Para quem é o teto de R$ 200.000,00 (duzentos mil reais) no primeiro 1º projeto?
+      - O teto de R$ 200.000,00 (duzentos mil reais) no primeiro projeto 1º é apenas para quem não possui experiência comprovada na área cultural?
+      - O teto de R$ 200.000,00 (duzentos mil reais) no primeiro projeto 1º é para qualquer proponente?
+      - O teto de R$ 200.000,00 (duzentos mil reais) no primeiro projeto 1º é para todos?
+      - Teto para o primeiro projeto 1º?
+      - Teto caso não haja experiência comprovada nos últimos 24 meses?
+      - Tempo experiência comprovada
+      - Validade experiência comprovada
     answer:
       - Somente no caso de o proponente não possuir ou não puder comprovar a experiência em atividades culturais nos últimos 24 meses e, cumulativamente, para acolher aqueles que procuram o financiamento de seus projetos culturais por intermédio do mecanismo Incentivo a projetos culturais pela 1ª vez é que se instituiu essa possibilidade de acesso, porém com o teto de até R$ 200.000,00 (duzentos mil reais) para o Custo Total do projeto. Referência § 2º do art. 7º da IN 01/17.
     event: respond
@@ -212,15 +229,19 @@ interactions:
 
   - name: experiencia-comprovada
     expect:
-      - Para valer como experiência comprovada em atividades culturais no caso do envio do 2º projeto é necessário executar o 1º projeto que foi admitido sem experiência do proponente?
+      - Para valer como experiência comprovada em atividades culturais no caso do envio do segundo 2º projeto é necessário executar o primeiro 1º projeto que foi admitido sem experiência do proponente?
+      - Quando o projeto vale como experiência comprovada?
+      - Quando o projeto conta como experiência comprovada?
     answer:
-      - Sim é necessário executar o 1º projeto e somente após a apresentação do seu relatório final o projeto poderá ser computado como experiência válida. Em caso de não execução não haverá atividades realizadas – de produção, por exemplo – essenciais para computar experiência na área cultural.
+      - É necessário executar o 1º projeto e somente após a apresentação do seu relatório final o projeto poderá ser computado como experiência válida. Em caso de não execução não haverá atividades realizadas – de produção, por exemplo – essenciais para computar experiência na área cultural.
     event: respond
     type: block
 
   - name: fins-aplicacao
     expect:
-      - Para fins de aplicação do disposto no §2º do art. 72 (possibilidade de adequação da planilha orçamentária) que trata de projetos que não se sujeitam à captação obrigatória do mínimo de 10% do valor autorizado para serem submetidos às etapas subsequentes de homologação, os contratos de patrocínio deverão alcançar que índice ou valores?
+      - Qual o índice ou valores dos contratos de patrocínio quando se usa a adequação da planilha orçamentária?
+      - Qual o índice ou valores dos contratos de patrocínio quando se aplica o disposto no §2º do art. 72?
+      - Qual o índice ou valores dos contratos de patrocínio quando o projeto não se sujeita a captação obrigatória de 10% do valor autorizado?
     answer:
       - Os contratos de patrocínio firmados deverão alcançar minimamente o índice de 20% (vinte) do valor autorizado (Custo do Projeto).
     event: respond
@@ -228,15 +249,21 @@ interactions:
 
   - name: custo-divulgacao
     expect:
-      - Os custos de divulgação estão limitados a 20% (vinte) do Valor do Projeto, podendo chegar até 30% (trinta) em certos casos. Por outro lado, pode-se deixar de prever custos de divulgação?
+      - Qual o limite de custos com divulgação?
+      - Qual o valor máximo para divulgação?
+      - Quanto posso gastar com divulgação?
+      - Os custos com divulgação podem deixar de serem previstos?
+      - O custo com divulgação é obrigatório?
     answer:
-      - Não. A divulgação é obrigatória na forma do art. 47 do Decreto nº 5.761, de 27/04/2006, dos arts 17 e 64 da IN 01/17 e também com vistas ao retorno institucional do patrocinador.
+      - Os custos de divulgação estão limitados a 20% (vinte) do Valor do Projeto, podendo chegar até 30% (trinta) em certos casos, mas não podem deixar de ser previstos.
+      - A divulgação é obrigatória na forma do art. 47 do Decreto nº 5.761, de 27/04/2006, dos arts 17 e 64 da IN 01/17 e também com vistas ao retorno institucional do patrocinador.
     event: respond
     type: block
 
   - name: prejuizo-patrocinador
     expect:
-      - Haverá prejuízo para o patrocinador caso o projeto não ultrapasse a fase de homologação (seja indeferido), com relação aos valores já aportados no projeto?
+      - Se o projeto for indeferido há prejuízo para o patrocinador?
+      - Há prejuízo para o patrocinador caso o projeto não ultrapasse a fase de homologação?
     answer:
       - Não haverá prejuízo. O patrocinador poderá ressarcir-se mediante a correspondente dedução fiscal a que faz jus em função do investimento no projeto. E os recursos não utilizados serão recolhidos ao Fundo Nacional de Cultura – FNC.
     event: respond
@@ -244,7 +271,8 @@ interactions:
 
   - name: tempo-captacao
     expect:
-      - Quanto tempo o empreendedor (proponente) terá para realizar a captação de 10% do orçamento apresentado (Custo do Projeto)?
+      - Em quanto tempo deve ser realizada a captação dos 10% do orçamento (custo do projeto)?
+      - Qual o prazo máximo para captação dos 10% do orçamento (custo do projeto)?
     answer:
       - Segundo o disposto no inciso I do art. 85 da IN 01/17 o prazo máximo para captação, com eventuais prorrogações, será de 24 (vinte e quatro) meses a partir da data de publicação da Portaria de Autorização para Captação de Recursos Incentivados.
     event: respond
@@ -252,7 +280,7 @@ interactions:
 
   - name: readequacao-capitalizacao
     expect:
-      - Caso apresente um projeto no valor de R$ 500.000,00, mas só consiga a captação de inicial de R$ 40.000,00 (8%), o orçamento poderia ser readequado?
+      - Caso não se consiga a captação inicial de 10%, o projeto pode ser readequado?
     answer:
       - Não. Há que se chegar ao patamar mínimo de 10% de captação para que seja oportunizada ao proponente a adequação do projeto à realidade de execução conforme disposto no art. 72 da IN 01/17.
     event: respond
@@ -260,7 +288,8 @@ interactions:
 
   - name: incentivo-valor-custo-projeto
     expect:
-      - Se o patrocinador tiver potencial de dedução e interesse é possível incentivar um valor maior que 10% do Custo do Projeto ou mesmo o total do valor autorizado, na fase de aprovação preliminar?
+      - O patrocinador pode incentivar um valor maior que 10% do custo do projeto na fase de aprovação preliminar?
+      - O patrocinador pode incentivar o valor total autorizado na fase de aprovação preliminar?
     answer:
       - Sim, não há restrições para o aporte – o que não altera as condições de homologação dos projetos previstas nesta normativa.
     event: respond
@@ -268,7 +297,9 @@ interactions:
 
   - name: periodo-comprovacao-financeira
     expect:
-      - Considerando que o MinC receberá informações em tempo real da movimentação da Conta Vinculada, via cartão magnético, a comprovação financeira (envio de documentos via Salic) poderia ser feita de 30 em 30 dias ou em período superior dependendo da execução do projeto?
+      - Com qual frequência a comprovação financeira (envio de documentos via Salic) deve ser feita?
+      - A comprovação financeira (envio de documentos via Salic) pode ser feita de 30 em 30 dias?
+      - Quando deve ser feita a comprovação financeira (envio de documentos via Salic)?
     answer:
       - As transações que não gerarem nota fiscal eletrônica deverão ser comprovadas à medida em que as despesas forem realizadas, conforme disposto no § 1º do art. 100 IN 01/17. Da mesma forma os recursos serão liberados considerando o cumprimento das etapas de execução do projeto – referência § 1º do art. 82 IN 01/17.
     event: respond
@@ -276,10 +307,10 @@ interactions:
 
   - name: auditoria
     expect:
-      - Quanto ao serviço de Auditoria?
-      - Volta a ser obrigatório em todos os projetos?
-      - Como será feito?
-      - Após a execução será realizada uma auditoria nos documentos fiscais e o parecer encaminhado ao MinC?
+      - A auditoria é obrigatória em todos os projetos?
+      - Como será feita a auditoria?
+      - Quando deve ser realizada a auditoria?
+      - Qual o valor dos projetos que precisam de auditoria?
     answer:
       - De acordo com o inciso II do §3º do art. 22 da IN 01/17 é obrigatória a previsão do item Auditoria Externa para os projetos com Valor de Projeto acima de R$ 5.000.000,00 (cinco milhões de reais). O Sr. Ministro de Estado da Cultura definirá oportunamente, mediante portaria específica, as diretrizes para a execução do item em questão. Referência inciso I do art. 133 da IN 01/17.
     event: respond
@@ -288,6 +319,7 @@ interactions:
   - name: servicos-advocaticios
     expect:
       - Qual a finalidade da obrigatoriedade dos serviços advocatícios?
+      - Para que serve os serviços advocatícios?
     answer:
       - Tendo em vista que o desconhecimento de preceitos legais e sua consequente não observância durante a realização dos projetos, frequentemente causa prejuízos à sua execução resultando muitas das vezes em reprovação e devolução de recursos ao erário. Igualmente observa o disposto no inciso I do art. 133 IN 01/17.
     event: respond
@@ -295,7 +327,7 @@ interactions:
 
   - name: contrapartida-social
     expect:
-      - Sobre a contrapartida social - "As propostas culturais deverão apresentar ação de formação de plateia..." - quais propostas devem conter essas ações de formação de plateia?
+      - Quais propostas devem conter ações de formação de plateia?
     answer:
       - Todas as propostas apresentadas ao mecanismo Incentivo a projetos culturais.
     event: respond
@@ -303,7 +335,8 @@ interactions:
 
   - name: projeto-producao
     expect:
-      - Conforme § 2º do art. 24 e inciso I do art. 25 a captação de recursos e os custos de divulgação poderão ser maiores para projetos realizados nas regiões Norte, Nordeste ou Centro-Oeste,.chegando a 15% e a 30% respectivamente. O projeto pode ser produzido no Sul e Sudeste e realizado no Norte?
+      - Projetos realizados no Norte, Nordeste ou Centro-Oeste e produzidos em outras regiões, podem ter captação de recursos e custos de divulgação maiores? 
+      - Para receber o estímulo de 15% a 30% na captação de recursos e custos de divulgação, o projeto deve ser realizado e produzido nas regiões Norte, Nordeste ou Centro-Oeste?
     answer:
       - O entendimento é de que a produção e a realização do projeto sejam locais. Dessa forma fica excluída a possibilidade de que despesas referentes a custos de divulgação (art. 25 IN 01/17) e a serviços administrativos (art. 27 IN 01/17) – "serviços-meio" – sejam realizadas em outras regiões. O fundamento da normativa é incrementar a produção e a realização local mediante induções e estímulos tendo em vista a desproporção notória em relação às outras regiões do país. Não obstante, obviamente, recursos de outras regiões serão benvindos. Bem assim os autores/detentores de direitos autorais não necessitam ser naturais ou residir nas referidas regiões.
     event: respond
@@ -311,10 +344,10 @@ interactions:
 
   - name: proponente-como-captador-de-recursos
     expect:
-      - Caso o proponente também seja o captador dos recursos, ele pode ser remunerado tanto pela captação dos recursos (Custo Vinculado) quanto pelos serviços realizados dentro do projeto (Valor do Projeto) até os limites específicos de cada item?
+      - Caso o proponente também seja o captador dos recursos, ele pode ser remunerado tanto pela captação dos recursos (Custo Vinculado) quanto pelos serviços realizados dentro do projeto (Valor do Projeto)?
     answer:
       - A referência ao Valor do Projeto consulta tão-somente à definição da base de cálculo para a porcentagem de remuneração, tal como, por exemplo, é disposto nos artigos 24 e 25. De forma alguma indica ou restringe a remuneração do proponente aos itens orçamentários que compõem os valores dessa base (Valor do Projeto). A expressão grifada refere-se à prestação de qualquer serviço ao projeto previsto na planilha orçamentária. O teto de remuneração ao proponente é de 20% do Valor do Projeto independentemente dos itens que componham essa remuneração.
-      - Ressalvamos o disposto no referido art. 28 IN 01/17 (grifo nosso): "Art. 28. O proponente poderá ser remunerado com recursos decorrentes de renúncia fiscal, desde que preste serviço ao projeto, discriminado no orçamento analítico e desde que o valor desta remuneração, ainda que por diversos serviços, não ultrapasse 20% (vinte por cento) do Valor do Projeto, respeitando o previsto no inciso XIV do art. 45 desta instrução normativa."
+      - Ressalvamos o disposto no referido art. 28 IN 01/17 (grifo nosso). "Art. 28. O proponente poderá ser remunerado com recursos decorrentes de renúncia fiscal, desde que preste serviço ao projeto, discriminado no orçamento analítico e desde que o valor desta remuneração, ainda que por diversos serviços, não ultrapasse 20% (vinte por cento) do Valor do Projeto, respeitando o previsto no inciso XIV do art. 45 desta instrução normativa."
     event: respond
     type: block
 
@@ -328,23 +361,28 @@ interactions:
 
   - name: assessoria-advocaticia
     expect:
-      - Deverá ser previsto um valor para assessoria advocatícia em todos os projetos, que só poderá ser utilizado mediante necessidade e autorização do Ministério da Cultura. Caso seu uso não tenha sido necessário, este valor ao final do projeto pode vir a ser alterado para outras despesas ou deverá necessariamente ser recolhido ao FNC?
+      - Caso o valor para assessoria advocatícia não seja usado, ele pode ser usado para outras despesas?
+      - Caso o valor para assessoria advocatícia não seja usado, ele deve ser recolhido ao FNC?
+      - Não usei o valor da assessoria advocatícia, posso utilizá-lo para outras despesas?
     answer:
-      - O dispositivo está previsto no § 3º e seus incisos, do art. 22 IN 01/17. Ao final do projeto o valor poderá ser remanejado conforme disposto no art. 90 e seus parágrafos – IN 01/17. Valores captados e não utilizados serão recolhidos ao FNC – referência: § 5º do art. 83 IN 01/17.
+      - O dispositivo está previsto no § 3º e seus incisos, do art. 22 IN 01/17. Ao final do projeto o valor poderá ser remanejado conforme disposto no art. 90 e seus parágrafos – IN 01/17. Valores captados e não utilizados serão recolhidos ao FNC – referência no § 5º do art. 83 IN 01/17.
     event: respond
     type: block
 
   - name: utilizacao-imagem-projeto
     expect:
-      - O patrocinador pode utilizar a imagem do projeto em sua comunicação institucional, em rótulos de produtos e ou campanhas por exemplo (sem custo para o projeto)?
+      - O patrocinador pode utilizar a imagem do projeto em sua comunicação?
+      - O patrocinador pode usar a imagem do projeto em rótulos de produtos e ou campanhas sem custo para o projeto?
+      - Posso utilizar a imagem do projeto sem custos?
     answer:
-      - Sim, desde que cite o Ministério da Cultura e aprove previamente o material de divulgação com o MinC. Referência: artigos 16 e 64 da IN 01/17.
+      - A imagem do projeto pode ser utilizada desde que cite o Ministério da Cultura e aprove previamente o material de divulgação com o MinC. Referência nos artigos 16 e 64 da IN 01/17.
     event: respond
     type: block
 
   - name: avaliacao-do-valor-do-beneficiario
     expect:
       - O projeto cultural que resulte em produtos ofertados gratuitamente à sociedade também será avaliado o Valor por Beneficiário?
+      - O Valor Beneficiário também é avaliado em projetos gratuitos?
     answer:
       - O Valor por Beneficiário estipulado independe se o projeto destinará seus produtos gratuitamente ou não. Trata-se do custo máximo unitário que um produto cultural financiado com recursos públicos deve custar para ser produzido.
     event: respond
@@ -353,6 +391,8 @@ interactions:
   - name: locacao-de-imovel
     expect:
       - A locação de imóvel para o meu projeto inviabiliza a previsão de outros itens de Custos Administrativos essenciais, uma vez que estão limitados a 15% do Valor do Projeto e o valor do aluguel consome praticamente todo esse percentual. Como resolver esse impasse?
+      - O aluguel consome os custos administrativos
+      - 15% do Valor do Projeto para Custos Administrativos não foram suficientes devido ao alugel
     answer:
       - O inciso II do art. 27 da IN 01/17 prevê para despesas de administração a “locação de imóvel durante a execução do projeto”. Tal rubrica refere-se apenas ao eventual espaço para montagem de um escritório administrativo/base de operações dessa ordem, necessário à consecução do objeto pactuado. As locações de espaços para ensaios, montagem do evento, apresentação, entre outras devem ser previstas nas etapas de pré-produção, produção e pós-produção do projeto.
     event: respond
