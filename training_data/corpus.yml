@@ -142,9 +142,10 @@ interactions:
       - O valor máximo de comercialização dos produtos culturais?
       - O teto da comercialização?
       - Quanto eu posso cobrar pela comercialização?
-      - Quanto pode ser cobrado pelo comercialização?
+      - Quanto pode ser cobrado pela comercialização?
       - O valor máximo é R$ 150,00 (cento e cinquenta reais)?
-      - QUal o preço médio do produto cultural? 
+      - Qual o preço médio do venda dos produto cultural? 
+      - Qual o preço máximo de venda dos ingressos ou produtos?
     answer:
       - A comercialização dos ingressos ou outros produtos culturais resultantes do projeto não possui teto de valor unitário, observando que esses valores estarão sempre sujeitos à aprovação do MinC com vistas a assegurar a democratização.
       - O preço médio do produto cultural a ser vendido a critério do proponente referente à cota de 50% da tiragem total de produtos é que deve ser no máximo de três vezes o valor mensal do Vale-Cultura, o que hoje representa R$ 150,00.
@@ -156,6 +157,7 @@ interactions:
     expect:
       - O valor máximo por projeto?
       - O custo máximo do projeto?
+      - O preço máximo por projeto?
       - O valor máximo para projetos de pessoa física ou empresário individual (MEI)?
       - O valor máximo para projetos de empresa individual (EIRELI)?
     answer:
@@ -174,13 +176,11 @@ interactions:
       - Quanto pode ser pago para os artistas?
       - Quanto posso pagar para os artistas?
       - Qual preço máximo dos artistas?
-      - O valor máximo para artista solo?
-      - O valor máximo para grupos?
-      - O valor máximo para modelos?
+      - O valor máximo para artista solo, grupos, modelos?
     answer:
       - O tetos máximos de cachês artísticos por apresentação estão previstos no art. 29 da IN 01/17.
-      - São eles: R$ 30.000,00 (trinta mil reais) para artista solo ou modelo solo e R$ 60.000,00 (sessenta mil reais) para grupos artísticos ou grupos de modelos de passarela.
-      - No caso exclusivo de orquestras os cachês deverão ser pagos por músico e para o regente, da seguinte forma: até R$ 1.500,00 (um mil e quinhentos reais) por músico e até R$ 30.000,00 (trinta mil reais) para o maestro.
+      - "São eles: R$ 30.000,00 (trinta mil reais) para artista solo ou modelo solo e R$ 60.000,00 (sessenta mil reais) para grupos artísticos ou grupos de modelos de passarela."
+      - "No caso exclusivo de orquestras os cachês deverão ser pagos por músico e para o regente, da seguinte forma: até R$ 1.500,00 (um mil e quinhentos reais) por músico e até R$ 30.000,00 (trinta mil reais) para o maestro."
     event: respond
     type: block
 
@@ -196,7 +196,7 @@ interactions:
     answer:
       - Após a publicação no Diário Oficial da União – DOU da Portaria que autoriza a captação de recursos incentivados será aberta uma conta na agência do Banco do Brasil da escolha do proponente.
       - Será uma Conta Vinculada ao projeto. Caso o projeto seja homologado e atingido o percentual mínimo de 20% de captação os recursos poderão ser movimentados por intermédio de cartão magnético ou gerenciador financeiro.
-      - O MinC disponibilizará para o cartão os recursos das captações subsequentes (o que também faculta movimentar via gerenciador financeiro) na medida da execução do projeto. Referência direta: Seção I do Capítulo VII da IN 01/17, arts. 80 a 83.
+      - "O MinC disponibilizará para o cartão os recursos das captações subsequentes (o que também faculta movimentar via gerenciador financeiro) na medida da execução do projeto. Referência direta: Seção I do Capítulo VII da IN 01/17, arts. 80 a 83."
     event: respond
     type: block
 
@@ -222,14 +222,16 @@ interactions:
       - Teto caso não haja experiência comprovada nos últimos 24 meses?
       - Tempo experiência comprovada
       - Validade experiência comprovada
+      - Não possuo experiência
     answer:
-      - Somente no caso de o proponente não possuir ou não puder comprovar a experiência em atividades culturais nos últimos 24 meses e, cumulativamente, para acolher aqueles que procuram o financiamento de seus projetos culturais por intermédio do mecanismo Incentivo a projetos culturais pela 1ª vez é que se instituiu essa possibilidade de acesso, porém com o teto de até R$ 200.000,00 (duzentos mil reais) para o Custo Total do projeto. Referência § 2º do art. 7º da IN 01/17.
+      - No caso de o proponente não possuir ou não puder comprovar a experiência em atividades culturais nos últimos 24 meses e, cumulativamente, para acolher aqueles que procuram o financiamento de seus projetos culturais por intermédio do mecanismo Incentivo a projetos culturais pela 1ª vez, instituiu-se a possibilidade de acesso, porém com o teto de até R$ 200.000,00 (duzentos mil reais) para o Custo Total do projeto. Referência § 2º do art. 7º da IN 01/17.
     event: respond
     type: block
 
   - name: experiencia-comprovada
     expect:
-      - Para valer como experiência comprovada em atividades culturais no caso do envio do segundo 2º projeto é necessário executar o primeiro 1º projeto que foi admitido sem experiência do proponente?
+      - Para valer como experiência comprovada no caso do envio do segundo 2º projeto é necessário executar o primeiro 1º projeto que foi admitido sem experiência do proponente?
+      - Para ter experiência comprovação no segundo 2º projeto o primeiro 1º deve ter sido concluído?
       - Quando o projeto vale como experiência comprovada?
       - Quando o projeto conta como experiência comprovada?
     answer:
@@ -251,7 +253,6 @@ interactions:
     expect:
       - Qual o limite de custos com divulgação?
       - Qual o valor máximo para divulgação?
-      - Quanto posso gastar com divulgação?
       - Os custos com divulgação podem deixar de serem previstos?
       - O custo com divulgação é obrigatório?
     answer:
@@ -375,7 +376,7 @@ interactions:
       - O patrocinador pode usar a imagem do projeto em rótulos de produtos e ou campanhas sem custo para o projeto?
       - Posso utilizar a imagem do projeto sem custos?
     answer:
-      - A imagem do projeto pode ser utilizada desde que cite o Ministério da Cultura e aprove previamente o material de divulgação com o MinC. Referência nos artigos 16 e 64 da IN 01/17.
+      - "A imagem do projeto pode ser utilizada desde que cite o Ministério da Cultura e aprove previamente o material de divulgação com o MinC. Referência: artigos 16 e 64 da IN 01/17."
     event: respond
     type: block
 
