@@ -244,6 +244,7 @@ interactions:
       - Qual o índice ou valores dos contratos de patrocínio quando se usa a adequação da planilha orçamentária?
       - Qual o índice ou valores dos contratos de patrocínio quando se aplica o disposto no §2º do art. 72?
       - Qual o índice ou valores dos contratos de patrocínio quando o projeto não se sujeita a captação obrigatória de 10% do valor autorizado?
+      - Se não houve a captação dos 10% do custo do projeto, quanto é preciso de patrocínio?
     answer:
       - Os contratos de patrocínio firmados deverão alcançar minimamente o índice de 20% (vinte) do valor autorizado (Custo do Projeto).
     event: respond
@@ -265,6 +266,7 @@ interactions:
     expect:
       - Se o projeto for indeferido há prejuízo para o patrocinador?
       - Há prejuízo para o patrocinador caso o projeto não ultrapasse a fase de homologação?
+      - O projeto não ultrapassou a fase de homologação mas já recebeu patrocínio, o valor pode ser ressarcido?
     answer:
       - Não haverá prejuízo. O patrocinador poderá ressarcir-se mediante a correspondente dedução fiscal a que faz jus em função do investimento no projeto. E os recursos não utilizados serão recolhidos ao Fundo Nacional de Cultura – FNC.
     event: respond
@@ -282,6 +284,7 @@ interactions:
   - name: readequacao-capitalizacao
     expect:
       - Caso não se consiga a captação inicial de 10%, o projeto pode ser readequado?
+      - O projeto pode ser readequado sem os 10% orçamento (custo do projeto)
     answer:
       - Não. Há que se chegar ao patamar mínimo de 10% de captação para que seja oportunizada ao proponente a adequação do projeto à realidade de execução conforme disposto no art. 72 da IN 01/17.
     event: respond
@@ -291,6 +294,7 @@ interactions:
     expect:
       - O patrocinador pode incentivar um valor maior que 10% do custo do projeto na fase de aprovação preliminar?
       - O patrocinador pode incentivar o valor total autorizado na fase de aprovação preliminar?
+      - Se o patrocinador quiser e ou puder, ele pode investir mais de 10% do custo do projeto?
     answer:
       - Sim, não há restrições para o aporte – o que não altera as condições de homologação dos projetos previstas nesta normativa.
     event: respond
@@ -298,6 +302,7 @@ interactions:
 
   - name: periodo-comprovacao-financeira
     expect:
+      - O minc recebe informações quando o cartão é usado
       - Com qual frequência a comprovação financeira (envio de documentos via Salic) deve ser feita?
       - A comprovação financeira (envio de documentos via Salic) pode ser feita de 30 em 30 dias?
       - Quando deve ser feita a comprovação financeira (envio de documentos via Salic)?
@@ -320,7 +325,7 @@ interactions:
   - name: servicos-advocaticios
     expect:
       - Qual a finalidade da obrigatoriedade dos serviços advocatícios?
-      - Para que serve os serviços advocatícios?
+      - Para que servem os serviços advocatícios?
     answer:
       - Tendo em vista que o desconhecimento de preceitos legais e sua consequente não observância durante a realização dos projetos, frequentemente causa prejuízos à sua execução resultando muitas das vezes em reprovação e devolução de recursos ao erário. Igualmente observa o disposto no inciso I do art. 133 IN 01/17.
     event: respond
@@ -329,6 +334,9 @@ interactions:
   - name: contrapartida-social
     expect:
       - Quais propostas devem conter ações de formação de plateia?
+      - O projeto deve conter ações de formação de plateia?
+      - O projeto deve ter plateia?
+      - ação de formação de plateia
     answer:
       - Todas as propostas apresentadas ao mecanismo Incentivo a projetos culturais.
     event: respond
@@ -337,6 +345,7 @@ interactions:
   - name: projeto-producao
     expect:
       - Projetos realizados no Norte, Nordeste ou Centro-Oeste e produzidos em outras regiões, podem ter captação de recursos e custos de divulgação maiores? 
+      - O projeto pode ser realizado no Norte, Nordeste ou Centro-Oeste e produzido em outras regiões e reber o aumento do limite de custos?
       - Para receber o estímulo de 15% a 30% na captação de recursos e custos de divulgação, o projeto deve ser realizado e produzido nas regiões Norte, Nordeste ou Centro-Oeste?
     answer:
       - O entendimento é de que a produção e a realização do projeto sejam locais. Dessa forma fica excluída a possibilidade de que despesas referentes a custos de divulgação (art. 25 IN 01/17) e a serviços administrativos (art. 27 IN 01/17) – "serviços-meio" – sejam realizadas em outras regiões. O fundamento da normativa é incrementar a produção e a realização local mediante induções e estímulos tendo em vista a desproporção notória em relação às outras regiões do país. Não obstante, obviamente, recursos de outras regiões serão benvindos. Bem assim os autores/detentores de direitos autorais não necessitam ser naturais ou residir nas referidas regiões.
@@ -346,6 +355,7 @@ interactions:
   - name: proponente-como-captador-de-recursos
     expect:
       - Caso o proponente também seja o captador dos recursos, ele pode ser remunerado tanto pela captação dos recursos (Custo Vinculado) quanto pelos serviços realizados dentro do projeto (Valor do Projeto)?
+      - O proponente pode ser tanto o captador de recursos como o prestador de serviços dentro do projeto?
     answer:
       - A referência ao Valor do Projeto consulta tão-somente à definição da base de cálculo para a porcentagem de remuneração, tal como, por exemplo, é disposto nos artigos 24 e 25. De forma alguma indica ou restringe a remuneração do proponente aos itens orçamentários que compõem os valores dessa base (Valor do Projeto). A expressão grifada refere-se à prestação de qualquer serviço ao projeto previsto na planilha orçamentária. O teto de remuneração ao proponente é de 20% do Valor do Projeto independentemente dos itens que componham essa remuneração.
       - Ressalvamos o disposto no referido art. 28 IN 01/17 (grifo nosso). "Art. 28. O proponente poderá ser remunerado com recursos decorrentes de renúncia fiscal, desde que preste serviço ao projeto, discriminado no orçamento analítico e desde que o valor desta remuneração, ainda que por diversos serviços, não ultrapasse 20% (vinte por cento) do Valor do Projeto, respeitando o previsto no inciso XIV do art. 45 desta instrução normativa."
@@ -354,7 +364,7 @@ interactions:
 
   - name: captacao-recurso-inicial
     expect:
-      - Sobre a tramitação após a captação de recurso inicial, existe a possibilidade de receber e responder diligências antes de uma aprovação ou reprovação final?
+      - Após a captação de recurso inicial, existe a possibilidade de receber e responder diligências antes de uma aprovação ou reprovação final?
     answer:
       - Sim, as diligências poderão ocorrer na fase de análise técnica (art. 73 IN 01/17) e de apreciação da CNIC (art. 76 IN 01/17).
     event: respond
