@@ -27,10 +27,21 @@ common.regexEscape = (string) ->
 common.loadConfigfile = (filepath) ->
     try
       console.log("Loading corpus: " + filepath)
-      return yaml.safeLoad fs.readFileSync filepath, 'utf8'
+      data = []
+      fs.readdir filepath, (err, files) ->
+        data = files.map (filename) ->
+          console.log('FILENAMEs')
+          console.log(filepath+'/'+filename)
+          return yaml.safeLoad fs.readFileSync filepath+'/'+filename, 'utf8'
+
+        console.log 'DATA CONTENT FIRST ELEMENT'
+        console.log data[0]
+
+      return yaml.safeLoad fs.readFileSync filepath+'/corpus.yml', 'utf8'
     catch err
       console.error "An error occurred while trying to load bot's config."
       console.error err
       throw "Error on loading YAML file " + filepath
+      console.error "An error occurred while trying to load bot's config."
 
 module.exports = common

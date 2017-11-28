@@ -7,9 +7,11 @@ hubotPath = module.parent.filename
 hubotPath = path.dirname hubotPath for [1..4]
 corpus = (process.env.HUBOT_CORPUS || 'corpus.yml')
 configPath = path.join hubotPath, 'training_data', corpus
+dictPath = path.join hubotPath, 'training_data'
 
 try
-  config = loadConfigfile configPath
+  config = loadConfigfile dictPath
+
 catch err
   process.exit()
 
