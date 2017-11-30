@@ -157,13 +157,14 @@ module.exports = (_config, _configPath, robot) ->
   trainBot = (retrain = false) ->
     console.log 'Processing interactions'
     console.time 'Processing interactions (Done)'
-
     if retrain
         nodes = {}
         classifier = new natural.LogisticRegressionClassifier(PorterStemmer)
 
     for interaction in config.interactions
+      console.log interaction
       {name, classifiers, event} = interaction
+      console.log interaction
       nodes[name] = new events[event] interaction
       # count error nodes
       if name.substr(0,5) == "error"

@@ -24,19 +24,40 @@ common.regexEscape = (string) ->
   #http://stackoverflow.com/a/6969486
   string.replace /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&"
 
+getYAMLFiles = (filepath) ->
+  listFile = fs.readdirSync filepath
+  dataFiles = []
+  if listFile.length > 0
+    dataFiles = listFile.map (filename) ->
+      return yaml.safeLoad fs.readFileSync filepath+'/'+filename, 'utf8'
+  else
+    console.error('The directory: '+ filepath + ' is empty.')
+
+  return dataFiles
+
+mergeYAMLFiles = (dataFiles) ->
+  arrTrust = []
+  arrInteractions = []
+  mindBot = Object.create(null)
+
+  dataFiles.forEach (element,index) ->
+    if index < 1
+      arrTrust[index] = element.trust
+      arrInteractions = element.interactions
+
+  mindBot['trust'] = Math.min.apply(null,arrTrust)
+  mindBot['iteractions'] = arrInteractions
+
+  return mindBot
+
 common.loadConfigfile = (filepath) ->
     try
-      console.log("Loading corpus: " + filepath)
-      data = []
-      fs.readdir filepath, (err, files) ->
-        data = files.map (filename) ->
-          console.log('FILENAMEs')
-          console.log(filepath+'/'+filename)
-          return yaml.safeLoad fs.readFileSync filepath+'/'+filename, 'utf8'
+      contentFiles = getYAMLFiles(filepath)
+      d = mergeYAMLFiles(contentFiles)
 
-        console.log 'DATA CONTENT FIRST ELEMENT'
-        console.log data[0]
-
+#      console.log d
+#      return d
+#      console.log yaml.safeLoad fs.readFileSync filepath+'/corpus.yml', 'utf8'
       return yaml.safeLoad fs.readFileSync filepath+'/corpus.yml', 'utf8'
     catch err
       console.error "An error occurred while trying to load bot's config."
@@ -45,3 +66,4 @@ common.loadConfigfile = (filepath) ->
       console.error "An error occurred while trying to load bot's config."
 
 module.exports = common
+
