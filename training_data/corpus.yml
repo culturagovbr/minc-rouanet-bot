@@ -50,7 +50,7 @@ interactions:
       - oi como vai
       - tudo bem
     answer:
-      - olá $user, eu vou bem e você?
+      - olá, eu vou bem e você?
       - estou feliz de estar aqui =)
     next:
       interactions:
@@ -80,11 +80,11 @@ interactions:
       - bom dia pessoal
       - good morning
     answer:
-      - Olá $user, um ótimo dia para você!
-      - Bom dia $user, já deu uma olhada lá fora?
+      - Olá, um ótimo dia para você!
+      - Bom dia, já deu uma olhada lá fora?
       - Está um dia ótimo para navegar na internet
-      - Bom demais $user ;)
-      - está melhor agora que você chegou $user
+      - Bom demais ;)
+      - está melhor agora que você chegou
     event: respond
     type: random
 
@@ -93,11 +93,11 @@ interactions:
       - boa tarde
       - boa tarde galera
     answer:
-      - Olá $user, uma tarde fantástica para você!
-      - boa tarde $user, já almoçou?
+      - Olá, uma tarde fantástica para você!
+      - boa tarde, já almoçou?
       - Está uma tarde ótima para um _sleep mode_ rápido ;)
-      - Taarrrdee $user
-      - $user já estava sentindo sua falta
+      - Taarrrdee
+      - já estava sentindo sua falta
     event: respond
     type: random
 
@@ -106,9 +106,9 @@ interactions:
       - boa noite
       - até mais e boa noite
     answer:
-      - Uma boa noite pra ti também $user!
-      - Boa noite $user
-      - Está uma noite boa mesmo $user
+      - Uma boa noite pra ti também!
+      - Boa noite
+      - Está uma noite boa mesmo
     event: respond
     type: random
 
