@@ -95,11 +95,11 @@ Após integrar o código ao seu site, uma janela semelhante a da imagem a seguir
 Para disparar uma mensagem de boas vindas podem ser usados **Triggers**. Um **trigger** dispara uma ação, de acordo com uma condição. A condição pode ser o usuário acessar uma URL ou o tempo do usuário no site. A ação, neste caso, é o envio da mensagem de boas vindas.
 
 Para adicionar um **trigger** ao Livechat, no menu lateral esquerdo clique na opção **Triggers**. Em seguida, selecione a opção **Enabled** como **Yes**, e preencha o nome e a descrição do **trigger**. Caso o critério para o disparo seja o usuário entrar numa URL, selecione no campo **Condition** a opção **Visitor page URL**, e no campo ao lado, digite a URL desejada.
-Selecione no campo **Action** a opção **Send a message**, digite o nome do bot (**botbat**) e a mensagem de boas-vindas. Por fim, clique em **Save**.
+Selecione no campo **Action** a opção **Send a message**, digite o nome do bot (**botnat**) e a mensagem de boas-vindas. Por fim, clique em **Save**.
 
 ![Livechat Trigger URL](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/trigger_url.png)
 
-Caso o critério para o disparo seja o tempo do usuário no site, selecione, no campo **Condition** a opção **Visitor time on site**, e no campo ao lado, informe o tempo que deve ser aguardado. Por fim, clique em **Save**.
+Caso o critério para o disparo seja o tempo do usuário no site, selecione no campo **Condition** a opção **Visitor time on site**, e no campo ao lado, informe o tempo que deve ser aguardado. Por fim, clique em **Save**.
 
 ![Livechat Trigger Time](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/trigger_time.png)
 
