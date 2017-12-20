@@ -90,6 +90,18 @@ Após integrar o código ao seu site, uma janela semelhante a da imagem a seguir
 
 ![Livechat window](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/livechat.png)
 
+#### Mensagem de boas vindas no Livechat
+
+Para disparar uma mensagem de boas vindas podem ser usados **Triggers**. Um **trigger* dispara uma ação, de acordo com uma condição. A condição pode ser o usuário acessar uma URL ou o tempo do usuário no site. A ação, neste caso, é o envio da mensagem de boas vindas.
+
+Para adicionar um **trigger** ao Livechat, no menu lateral esquerdo clique na opção **Triggers**. Em seguida, selecione a opção **Enabled** como **Yes**, e preencha o nome e a descrição do **trigger**. Caso o critério para o disparo seja o usuário entrar numa URL, selecione, no campo **Condition** a opção **Visitor page URL**, e no campo ao lado, a URL desejada. Por fim, clique em **Save**.
+
+![Livechat Trigger URL](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/trigger_url.png)
+
+Caso o critério para o disparo seja o tempo do usuário no site, selecione, no campo **Condition** a opção **Visitor time on site**, e no campo ao lado, informe o tempo que deve ser aguardado. Por fim, clique em **Save**.
+
+![Livechat Trigger Time](https://gitlab.com/lappis-unb/minc/rouanet-bot/wikis/trigger_time.png)
+
 ## Alterando o YAML
 
 Para mais informações sobre a estrutura do YAML e como modificá-lo, acesse o [README do Hubot-Natural](https://github.com/RocketChat/hubot-natural/blob/master/README.md).
