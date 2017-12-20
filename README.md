@@ -92,7 +92,7 @@ Após integrar o código ao seu site, uma janela semelhante a da imagem a seguir
 
 #### Mensagem de boas vindas no Livechat
 
-Para disparar uma mensagem de boas vindas podem ser usados **Triggers**. Um **trigger* dispara uma ação, de acordo com uma condição. A condição pode ser o usuário acessar uma URL ou o tempo do usuário no site. A ação, neste caso, é o envio da mensagem de boas vindas.
+Para disparar uma mensagem de boas vindas podem ser usados **Triggers**. Um **trigger** dispara uma ação, de acordo com uma condição. A condição pode ser o usuário acessar uma URL ou o tempo do usuário no site. A ação, neste caso, é o envio da mensagem de boas vindas.
 
 Para adicionar um **trigger** ao Livechat, no menu lateral esquerdo clique na opção **Triggers**. Em seguida, selecione a opção **Enabled** como **Yes**, e preencha o nome e a descrição do **trigger**. Caso o critério para o disparo seja o usuário entrar numa URL, selecione, no campo **Condition** a opção **Visitor page URL**, e no campo ao lado, a URL desejada. Por fim, clique em **Save**.
 
