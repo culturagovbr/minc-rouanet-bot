@@ -1,0 +1,277 @@
+# Neste arquivo contém o que cada identificador de situação representa
+trust: .9
+interactions:
+
+  - name: mecenato-b02
+    expect:
+      - B02
+    answer:
+      - O identificador B02 significa que o seu projeto já foi enquadrado
+      - Projeto enquadrado
+    event: respond
+
+  - name: mecenato-b05
+    expect:
+      - B05
+    answer:
+      - Reanalisar enquadrado
+    event: respond
+
+  - name: mecenato-b11
+    expect:
+      - B11
+    answer:
+      - Encaminhado para análise técnica
+    event: respond
+
+  - name: mecenato-b20
+    expect:
+      - B20
+    answer:
+      - Projeto adequado á realidade de execução
+    event: respond
+
+  - name: mecenato-d03
+    expect:
+      - D03
+    answer:
+      - Projeto aprovado - aguardando análise documental
+    event: respond
+
+  - name: mecenato-d17
+    expect:
+      - D17
+    answer:
+      - Aguardando publicação de portaria de Prorrogação
+    event: respond
+
+  - name: mecenato-d20
+    expect:
+      - D20
+    answer:
+      - Recurso
+    event: respond
+
+  - name: mecenato-d28
+    expect:
+      - D28
+    answer:
+      - Encaminhado para inclusão em portaria / complementação
+    event: respond
+
+  - name: mecenato-d29
+    expect:
+      - D29
+    answer:
+      - Encaminhado para inclusão em portaria / redução
+    event: respond
+
+  - name: mecenato-d40
+    expect:
+      - D40
+    answer:
+      - Análise de recurso prestação de contas
+    event: respond
+
+  - name: mecenato-d52
+    expect:
+      - D52
+    answer:
+      - Projeto homologado
+    event: respond
+
+  - name: mecenato-e10
+    expect:
+      - E10
+    answer:
+      - Autorizada a captação total de recursos
+    event: respond
+
+  - name: mecenato-e11
+    expect:
+      - E11
+    answer:
+      - Expirado o prazo de captação total
+    event: respond
+
+  - name: mecenato-e12
+    expect:
+      - E12
+    answer:
+      - Autorizada a captação residual dos recursos
+    event: respond
+
+  - name: mecenato-e13
+    expect:
+      - E13
+    answer:
+      - Projeto em execução - Encerrado prazo de captação
+    event: respond
+
+  - name: mecenato-e14
+    expect:
+      - E14
+    answer:
+      - Aguarda decisão superior
+    event: respond
+
+  - name: mecenato-e15
+    expect:
+      - E15
+    answer:
+      - Expirado o prazo de captação parcial
+    event: respond
+
+  - name: mecenato-e16
+    expect:
+      - E16
+    answer:
+      - Projeto encerrado por excesso de prazo sem captação
+    event: respond
+
+  - name: mecenato-e23
+    expect:
+      - E23
+    answer:
+      - Inadimplente
+    event: respond
+
+  - name: mecenato-e24
+    expect:
+      - E24
+    answer:
+      - Apresentou prestações de contas
+    event: respond
+
+  - name: mecenato-e36
+    expect:
+      - E36
+    answer:
+      - Arquivado por ter 24 meses aprovação sem captação d
+    event: respond
+
+  - name: mecenato-e50
+    expect:
+      - E50
+    answer:
+      - Diligenciado - movimentação da conta corrente
+    event: respond
+
+  - name: mecenato-e59
+    expect:
+      - E59
+    answer:
+      - Diligenciado - Readequação
+    event: respond
+
+  - name: mecenato-e60
+    expect:
+      - E60
+    answer:
+      - Diligenciado - fiscalização
+    event: respond
+
+  - name: mecenato-e63
+    expect:
+      - E63
+    answer:
+      - Projeto arquivado - por excesso de prazo sem captação
+    event: respond
+
+  - name: mecenato-e65
+    expect:
+      - E65
+    answer:
+      - Projeto arquivado - solicitação de arquivamento de
+    event: respond
+
+  - name: mecenato-e66
+    expect:
+      - E65
+    answer:
+      - Inadimplente - por não responder diligência na aval
+    event: respond
+
+  - name: mecenato-e72
+    expect:
+      - E72
+    answer:
+      - Execução Suspensa de Forma Cautelar
+    event: respond
+
+  - name: mecenato-e74
+    expect:
+      - E74
+    answer:
+      - Prazo prorrogado para a inserção da prestação de contas
+    event: respond
+
+  - name: mecenato-e75
+    expect:
+      - E75
+    answer:
+      - Expirado o prazo de execução do projeto
+    event: respond
+
+  - name: mecenato-e79
+    expect:
+      - E79
+    answer:
+      - Projeto não executado por insuficiência de captação
+    event: respond
+
+  - name: mecenato-e80
+    expect:
+      - E80
+    answer:
+      - Inadimplente - Proponente notificado a apresentar p
+    event: respond
+
+  - name: mecenato-e90
+    expect:
+      - E90
+    answer:
+      - Projeto liberado para adequação á realidade de exec
+    event: respond
+
+  - name: mecenato-g08
+    expect:
+      - G08
+    answer:
+      - Visto da Consultoria Juridica
+    event: respond
+
+  - name: mecenato-h04
+    expect:
+      - H04
+    answer:
+      - Proponente inadimplente
+    event: respond
+
+  - name: mecenato-k00
+    expect:
+      - k00
+    answer:
+      - Projeto arquivado
+    event: respond
+
+  - name: mecenato-l06
+    expect:
+      - L06
+    answer:
+      - Prestação de contas desaprovada com INDICATIVO para
+    event: respond
+
+  - name: mecenato-e25
+    expect:
+      - E25
+    answer:
+      - Análise de resposta de diligência - Objeto
+    event: respond
+
+  - name: mecenato-g43
+    expect:
+      - G43
+    answer:
+      - Aguarda análise técnico / financeira
+    event: respond
