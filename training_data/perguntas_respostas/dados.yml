@@ -1,0 +1,148 @@
+trust: .9
+interactions:
+  - name: cadastro-de-procuracao-para-visualizacao-do-procurador-em-fase-de-projeto
+    expect:
+      - Minha proposta foi transformada em projeto, porém não consigo visualiza-lo. Como resolvo?
+    answer:
+      - |
+        Prezado(a) proponente, Clicar em administrativo > Procuração > Cadastramento. 
+    event: respond
+
+  - name: cadastro-agencia-bancaria
+    expect:
+      - Estou preenchendo a proposta via Salic, porém ao cadastrar a agência, o sistema indica inválida. Como resolver?
+    answer:
+      - |
+        A agência bancária deve ser do banco do Brasil, deve conter 5 dígitos, sim hifens, pontos ou letras. 
+    event: respond
+
+  - name: projeto-homologado
+    expect:
+      - Meu projeto está com a Situação – D52 projeto homologado, o que significa?
+    answer:
+      - |
+        Posição definitiva do projeto (aprovação ou não).
+        O termo de homologação é anexado ao projeto para verificação do proponente.
+        O mesmo tem o prazo de 10 dias corridos, a contar da data de homologação para se manifestar quanto o mesmo. O proponente poderá encaminhar para o e-mail: proposta.incentivo@cultura.gov.br , pelo e-mail cadastrado no sistema, se desiste do prazo recursal (caso concorde) ou poderá encaminhar pedido de reconsideração (caso descorde).
+    event: respond
+
+  - name: fase-de-adequacao-do-projeto
+    expect:
+      - Meu projeto está com a Situação – E90 projeto liberado para adequação, o que significa?
+    answer:
+      - |
+        Proponente após garantir mínimo 10% do valor do projeto, poderá adequar o mesmo conforme a sua realidade. 
+        Passo a passo para não alteração no projeto:
+         
+        1-      Listar projetos
+        2-      Selecionar o CNPJ do proponente
+        3-      Ao lado direito da tela aparecerá um ícone azul (clicar na opção verde “alterar projeto”
+        4-      Clicar no ícone verde 
+        5-      Clicar no menu ao lado esquerdo da tela, na opção “enviar projeto ao Minc”. 
+
+        Passo a passo para alteração no projeto:
+         
+        1-      Listar projetos
+        2-      Selecionar o CNPJ do proponente
+        3-      Ao lado direito da tela aparecerá um ícone azul (clicar na opção verde “alterar projeto”)
+        4-      Clicar no ícone verde 
+        5-      A partir daí, realizar os ajustes, conforme a realidade. 
+        6-    Após os ajustes, clicar na opção “Enviar projeto ao Minc”.
+        
+        Ressalto que, o plano de distribuição poderá haver ajustes, mas não pode acrescentar produtos. 
+        Na planilha não há possibilidade de aumentar o valor. 
+        Resumo, objetivos e justificativas não podem ser alterados e o cronograma não pode ser inferior a 90 dias. 
+    event: respond
+
+  - name: fase-de-enquadramento-do-projeto
+    expect:
+      - Meu projeto foi enquadrado, como faço para desistir do prazo recursal ou para encaminhar recurso?
+    answer:
+      - |
+        Prezado(a) proponente,
+        O seu projeto foi enquadrado. Iniciou-se, portanto, o prazo de 10 dias corridos para recorrer caso não tenha acordo com o enquadramento proposto para o projeto.
+Caso concorde com o enquadramento dado é possível abrir mão (desistir) desse prazo obrigatório – o que abreviará os trâmites processuais. Ambas as manifestações se dão por via da aba “recurso” no Menu ao lado esquerdo da tela do projeto, no Salic. ATENÇÃO: O prazo dos 10 dias corridos, começam a valer a partir da data do enquadramento. 
+    event: respond
+
+  - name: pedido-de-reativacao 
+    expect:
+      - Minha proposta foi indeferida, porém posso encaminhar pedido de reativação Como proceder?
+    answer:
+      - |
+        Prezado(a) proponente,
+        O pedido de reativação deve ser encaminhado através de PDF e assinado pelo proponente.
+        O pedido deve conter as devidas justificativas para a reanálise do indeferimento e a resposta da diligência.  E-mail para encaminhamento: reativacao.proposta@cultura.gov.br
+    event: respond
+
+  - name: recuperacao-de-senha 
+    expect:
+      - Me cadastrei a muito tempo no Salic, mas não me recordo da senha de acesso. Como faço para resolver?
+    answer:
+      - |
+        Prezado(a) proponente, encaminhar e-mail para a área responsável, pelo e-mail: senhasalic@cultura.gov.br
+    event: respond
+
+  - name: captacao-de-recursos 
+    expect:
+      - Quando poderei efetuar a captação de recursos do meu projeto?
+    answer:
+      - |
+        Prezado(a), O projeto ainda passará pela fase de enquadramento e somente após o enquadramento ele será enviado para análise documental e depois publicação.
+        Somente após a publicação que será liberada a captação.
+    event: respond
+
+  - name: problemas-no-sistema
+    expect:
+      - Estou com problemas no Salic. Qual setor posso tirar minhas dúvidas?
+    answer:
+      - |
+        Prezado(a), Problemas no sistema é junto ao e-mail salic@cultura.gov.br envie o print da tela com o erro. 
+    event: respond
+
+  - name: edital-minc
+    expect:
+      - 
+    answer:
+      - |
+        Prezado(a), essa proposta se trata de Edital, nosso setor não trabalha com esse tipo de proposta. 
+        Entre em contato com o setor responsável pelo número (61)2024-2412 ou 2000.
+    event: respond
+
+ - name: d03–projeto-aprovado-aguardando-analise-documental
+    expect:
+      - 
+    answer:
+      - |
+        Prezado(a), a fase de análise documental não tem prazo previsto na Instrução Normativa.
+        Peço que acompanhe pelo sistema.
+    event: respond
+
+ - name: prorrogacao-automatica
+    expect:
+      - 
+    answer:
+      - |
+        Prezado(a), os projetos que estão marcados com prorrogação automática, serão prorrogados automaticamente.
+    event: respond
+
+ - name: projetos-em-analise-pela-secretaria-do-audiovisual
+    expect:
+      - 
+    answer:
+      - |
+        Prezado(a) proponente, Encaminhar e-mail para a área responsável, pelo e-mail: coaap.sav@cultura.gov.br 
+    event: respond
+
+ - name: projetos-em-analise-pelo-acompanhamento-ou-duvidas-referentes-a-area
+    expect:
+      - 
+    answer:
+      - |
+        Prezado(a) proponente, encaminhar e-mail para a área responsável, pelo e-mail: acompanhamento.incentivo@cultura.gov.br 
+    event: respond
+
+
+
+
+
+

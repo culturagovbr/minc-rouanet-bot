@@ -1,0 +1,65 @@
+trust: .9
+interactions:
+
+  - name: cadastro-do-proponente-no-salic
+    expect:
+      - Como cadastrar o proponente via Salic ?
+    answer:
+      - |
+        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > Preencher todos os dados.
+    event: respond
+    type: block
+
+  - name: cadastro-do-dirigente-no-salic
+    expect:
+      - Como cadastrar o dirigente no Salic?
+    answer:
+      - |
+        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado esquerdo da tela > Clicar em dirigente > Novo dirigente. 
+    event: respond
+    type: block
+
+  - name: cadastro-de-email-proponente-no-salic
+    expect:
+      - Como faço para cadastrar ou atualizar o e-mail do proponente?
+    answer:
+      - |
+        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado esquerdo da tela > Clicar em e-mail > Preencher os dados.
+    event: respond
+    type: block
+
+  - name: cadastro-de-endereco-proponente-no-salic
+    expect:
+      - Como faço para cadastrar ou atualizar o endereço do proponente?
+    answer:
+      - |
+        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado esquerdo da tela > Clicar em endereço > Preencher os dados.
+    event: respond
+    type: block
+
+  - name: cadastro-de-telefone-proponente-no-salic
+    expect:
+      - Como faço para cadastrar ou atualizar o telefone do proponente?
+    answer:
+      - |
+        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado esquerdo da tela > Clicar em telefone > Preencher os dados.
+    event: respond
+    type: block
+
+  - name: cadastro-natureza-do-proponente-no-salic
+    expect:
+      - O sistema me pede a natureza do proponente, como faço para cadastrar?
+    answer:
+      - |
+        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado esquerdo da tela > Clicar natureza > Preencher os dados.
+    event: respond
+    type: block
+
+  - name: cadastro-data-de-nascimento-do-proponente-no-salic
+    expect:
+      - O sistema me pede a data de nascimento do proponente, como faço para cadastrar?
+    answer:
+      - |
+        Prezado(a) proponente, Clicar em administrativo > Cadastrar proponente > Informar o CNPJ ou CPF > Clicar na opção salvar > Clicar no menu ao lado esquerdo da tela > Clicar informações adicionais > Preencher os dados.
+    event: respond
+    type: block
