@@ -5,7 +5,7 @@ chatbot = require path.join __dirname, 'bot', 'index.coffee'
 
 hubotPath = module.parent.filename
 hubotPath = path.dirname hubotPath for [1..4]
-corpus = (process.env.HUBOT_CORPUS || 'corpus.yml')
+corpus = (process.env.HUBOT_CORPUS || 'duvidas_fac.yml')
 configPath = path.join hubotPath, 'training_data', corpus
 dictPath = path.join hubotPath, 'training_data'
 
